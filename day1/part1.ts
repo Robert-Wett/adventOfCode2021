@@ -1,9 +1,14 @@
 import { readInNumberLines } from '../helpers';
 
-const dayOneData : number[] = readInNumberLines('./input/day1-1.txt');
+const dayOneData : number[] = readInNumberLines('../input/day1-1.txt');
 let depthIncreases : number = 0;
 
-const getSlidingWindow = (index: number, inputArr: number[]) : number => {
+dayOneData.reduce((memo, curValue) => {
+    if (memo && memo < curValue) {
+        depthIncreases++;
+    }
 
-    return 0;
-}
+    return curValue;
+})
+
+console.log(depthIncreases);
