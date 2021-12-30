@@ -33,7 +33,6 @@ export function readInSubDirections(): Array<Object> {
   let data = fs.readFileSync(path.join(__dirname, '..', '/input/day2-1.txt'), 'utf8');
   return data.split('\n').map((x) => {
     let [direction, steps] = x.split(' ');
-    console.log(direction, steps);
     return { direction, steps };
   });
 }
